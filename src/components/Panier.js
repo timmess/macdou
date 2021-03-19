@@ -2,9 +2,12 @@ import {useDispatch, useSelector} from "react-redux";
 import {Button, Col, Container, Row} from "react-bootstrap";
 import React, {useState} from "react";
 import Commande from "./Commande";
+import { useHistory } from "react-router-dom";
 
 
 export default function Panier() {
+
+    const history = useHistory();
     const state = useSelector(state => state);
     const dispatch = useDispatch();
     const [modalShow, setModalShow] = useState(false);
@@ -79,7 +82,8 @@ export default function Panier() {
 
     function handleReset() {
         dispatch(
-            {type: "RESET"}
+            {type: "RESET"},
+            history.push("/")
         )
     }
 
