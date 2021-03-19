@@ -77,7 +77,7 @@ export default function Panier() {
     )
 
     function handlePay() {
-        alert("Vous avez été prélevé de " + state.totalPrice + " euros ! (Pour de faux bien sûr)");
+        alert("Vous avez été prélevé de " + state.totalPrice + " euros ! (Pour de faux...)");
     }
 
     function handleReset() {

@@ -62,7 +62,7 @@ export default function Commande(props) {
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={props.onPay}>Payer</Button>
-                <Button onClick={props.onHide}>Close</Button>
+                <Button onClick={props.onHide}>Fermer</Button>
             </Modal.Footer>
         </Modal>
     );

@@ -38,7 +38,7 @@ const data =
         ],
         menus: [
             {
-                category: "Menu",
+                category: "menu",
                 name: "Classic",
                 sandwich: "Jambon beurre",
                 boisson: "Coca",
@@ -46,7 +46,7 @@ const data =
                 price: 8
             },
             {
-                category: "Menu",
+                category: "menu",
                 name: "Royal",
                 sandwich: "Chevre",
                 boisson: "Fanta",
