@@ -1,13 +1,13 @@
 import {useDispatch, useSelector} from "react-redux";
 import {Button, Col, Container, Row} from "react-bootstrap";
-import React from "react";
+import React, {useState} from "react";
 import Commande from "./Commande";
+
 
 export default function Panier() {
     const state = useSelector(state => state);
     const dispatch = useDispatch();
-    const [modalShow, setModalShow] = React.useState(false);
-
+    const [modalShow, setModalShow] = useState(false);
 
     return (
         <Container>
@@ -53,7 +53,7 @@ export default function Panier() {
             {state.panier.length === 0 &&
             <Row>
                 <Col className="text-center mt-5">
-                    <p>Faites vos achats</p>
+                    <h4>Veuillez faire vos achats</h4>
                 </Col>
             </Row>
             }
@@ -74,7 +74,7 @@ export default function Panier() {
     )
 
     function handlePay() {
-        alert("Vous avez été prélevé de " + state.totalPrice + " euros !");
+        alert("Vous avez été prélevé de " + state.totalPrice + " euros ! (Pour de faux bien sûr)");
     }
 
     function handleReset() {
